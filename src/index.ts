@@ -26,7 +26,7 @@ if(TEST_DAY > Days.length){
 
 aocLoader(Number(process.env.AOC_YEAR), TEST_DAY, process.env.AOC_SESSION)
   .then((data) => {
-    runDay(Days[TEST_DAY+1],data);
+    runDay(Days[TEST_DAY-1],data);
   });
 
 
