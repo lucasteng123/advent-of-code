@@ -1,15 +1,15 @@
-import { IDay, IPart } from "../internalTypes"
+import { IDay, IPart } from '../internalTypes';
 
 const part1: IPart = (input) => {
-  return ""
-}
+  return '';
+};
 
 const part2: IPart = (input) => {
-  return ""
-}
+  return '';
+};
 
 export const Day: IDay = {
   part1,
   part2
-}
+};
 
