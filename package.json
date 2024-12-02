@@ -1,0 +1,38 @@
+{
+  "name": "advent-of-code-2023",
+  "version": "1.0.0",
+  "description": "Repository for my 2022 journey through the Advent of Code",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "ts-mocha test/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasteng123/advent-of-code-2022.git"
+  },
+  "keywords": [
+    "adventofcode"
+  ],
+  "author": "Lucas Teng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasteng123/advent-of-code-2022/issues"
+  },
+  "homepage": "https://github.com/lucasteng123/advent-of-code-2022#readme",
+  "dependencies": {
+    "aoc-loader": "^1.4.4",
+    "dotenv": "^16.3.1",
+    "mocha": "^10.1.0",
+    "open": "^8.4.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.1",
+    "chai": "^4.3.10",
+    "eslint": "^8.28.0",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.3.2"
+  }
+}
