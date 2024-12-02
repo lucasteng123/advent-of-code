@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rimraf ./build && tsc",
     "start": "npm run build && node build/src/index.js",
-    "test": "ts-mocha test/*.ts"
+    "test": "ts-mocha test/*.ts",
+    "setup": "node ./setup.mjs"
   },
   "repository": {
     "type": "git",
