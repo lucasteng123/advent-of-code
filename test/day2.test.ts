@@ -1,13 +1,14 @@
 import assert from 'assert';
 
 import { Day } from '../src/days/day2';
+import { parseInput } from '../src/utils/input';
 
-const testinput = `7 6 4 2 1
+const testinput = parseInput(`7 6 4 2 1
 1 2 7 8 9
 9 7 6 2 1
 1 3 2 4 5
 8 6 4 4 1
-1 3 6 7 9`;
+1 3 6 7 9`);
 
 describe('Day 2', ()=>{
   it('should run part 1', ()=>{

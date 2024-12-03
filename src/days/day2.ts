@@ -1,7 +1,7 @@
 import { IDay, IPart } from '../internalTypes';
 
 const part1: IPart = (input) => {
-  const reports = input.split('\n').map(report => report.split(' ').map(Number));
+  const reports = input.toLines().map(report => report.split(' ').map(Number));
   const validReports = reports.filter(isSafe);
 
   return validReports.length;
@@ -18,8 +18,11 @@ const isSafe = (level: number[]) => {
   return increasing || decreasing;
 };
 
+// This is a brute force solution, but it works
+// it would be nice to have a more elegant solution, but that will be a future Lucas problem. 
+
 const part2: IPart = (input) => {
-  const reports = input.split('\n').map(report => report.split(' ').map(Number));
+  const reports = input.toLines().map(report => report.split(' ').map(Number));
   const validReports = reports.filter(report=>{
     if(isSafe(report)) return true;
     for(let i = 0; i < report.length; i++) {

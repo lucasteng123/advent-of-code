@@ -2,22 +2,20 @@ import aocLoader from 'aoc-loader';
 import { Days } from './days/days';
 import dotenv from 'dotenv';
 import { IDay } from './internalTypes';
+import { parseInput } from './utils/input';
 
 dotenv.config();
 
 const TEST_DAY = Number(process.argv[2]);
 
 if(!TEST_DAY || Number.isNaN(TEST_DAY)){
-  throw new Error('Supply a day');
-  // Days.forEach((day,index)=>{
-  //   aocLoader(Number(process.env.AOC_YEAR), index+1, process.env.AOC_SESSION)
-  //     .then((data) => {
-
-  //       console.log("Day "+index+1);
-        
-
-  //     })
-  // })
+  for(let i = 0; i < Days.length; i++){
+    aocLoader(Number(process.env.AOC_YEAR), i+1, process.env.AOC_SESSION)
+      .then((data) => {
+        return runDay(Days[i],data, i+1);
+      });
+  }
+  process.exit(0);
 }
 
 if(TEST_DAY > Days.length){
@@ -26,14 +24,17 @@ if(TEST_DAY > Days.length){
 
 aocLoader(Number(process.env.AOC_YEAR), TEST_DAY, process.env.AOC_SESSION)
   .then((data) => {
-    runDay(Days[TEST_DAY-1],data);
+    runDay(Days[TEST_DAY-1],data, TEST_DAY);
   });
 
 
-const runDay = (day:IDay, input:string) => {
+const runDay = async (day:IDay, input:string, dayNumber: number) => {
+  console.log(`Day ${dayNumber}:`);
+
+  const parsedInput = parseInput(input);
   console.log('Part 1');
-  console.log(day.part1(input));
+  console.log(await day.part1(parsedInput));
 
   console.log('Part 2');
-  console.log(day.part2(input));
+  console.log(await day.part2(parsedInput));
 };
