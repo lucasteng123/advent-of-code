@@ -23,6 +23,7 @@ const part2: IPart = (input) => {
   for (const instruction of parsedInstructions) {
     if (instruction.groups?.enable) {
       enabled = instruction.groups.enable === 'do()';
+
     } else if (instruction.groups?.command && enabled) {
       const [a, b] = instruction.groups.command.match(/\d+/g)!.map(Number);
       accumulator += a * b;
