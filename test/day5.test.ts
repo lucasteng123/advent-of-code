@@ -32,7 +32,7 @@ const testInput = parseInput(`47|53
 61,13,29
 97,13,75,29,47`);
 
-describe.only('Day 5', ()=>{
+describe('Day 5', ()=>{
   it('should run part 1', ()=>{
     assert.equal(Day.part1(testInput),143);
   });
