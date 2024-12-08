@@ -19,6 +19,10 @@ export class AOCInput {
   toLinesAsStringArray() {
     return this.inputString.split('\n').map(ln=>ln.split(''));
   }
+
+  toMatrix() {
+    return this.inputString.split('\n').map(ln=>ln.split(''));
+  }
 }
 
 
