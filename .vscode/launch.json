@@ -19,7 +19,7 @@
           "runtimeArgs": [
               "run-script",
               "start",
-              "3"
+              "8"
           ],
           "runtimeExecutable": "npm",
           "skipFiles": [
