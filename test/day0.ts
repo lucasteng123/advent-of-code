@@ -6,7 +6,7 @@ import { parseInput } from '../src/utils/input';
 const testInput = parseInput(`
 `);
 
-describe.skip('Day 0', ()=>{
+describe('Day 0', ()=>{
   it('should run part 1', ()=>{
     assert.equal(Day.part1(testInput),'');
   });
